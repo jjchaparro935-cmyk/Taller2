@@ -36,7 +36,7 @@ def plot_series(data, initial_date, proy):
     data_plot = data_plot[:-(120-proy)]
     fig = go.Figure([
         go.Scatter(
-            name='Demanda energética',
+            name='Demand',
             x=data_plot.index,
             y=data_plot['AT_load_actual_entsoe_transparency'],
             mode='lines',
@@ -101,7 +101,7 @@ def description_card():
         id="description-card",
         children=[
             #html.H5("Proyecto 1"),
-            html.H3("Pronóstico de producción energética"),
+            html.H3("Energy generation Forecast"),
             html.Div(
                 id="intro",
                 children="Esta herramienta contiene información sobre la demanda energética total en Austria cada hora según lo públicado en ENTSO-E Data Portal. Adicionalmente, permite realizar pronósticos hasta 5 dias en el futuro."
